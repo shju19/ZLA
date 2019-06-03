@@ -1,0 +1,846 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:weightSum="100" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="88"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="200" >
+
+            <!-- 가격검색 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:paddingTop="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/searchPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="가격"
+                    android:textColor="#000000"
+                    android:textSize="20sp"/>
+
+                <!-- 가격검색 좌우 정렬하기 위해 View 넣음 -->
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/minValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 - "
+                    android:textColor="#999999"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/maxValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="제한없음"
+                    android:textColor="#999999"
+                    android:textSize="20sp"/>
+            </LinearLayout>
+
+            <!-- RangeSeekBar 표시 레이아웃 -->
+            <LinearLayout
+                android:id="@+id/layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:padding="15dp"
+                android:orientation="horizontal">
+            </LinearLayout>
+
+            <!-- 연식검색 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:paddingTop="15dp"
+                android:paddingLeft="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/searchYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="연식"
+                    android:textColor="#000000"
+                    android:textSize="20sp"/>
+            </LinearLayout>
+
+            <!-- 연식검색 버튼 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:padding="15dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <ToggleButton
+                    android:id="@+id/searchYear2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:textOn="2016년"
+                    android:textOff="2016년"
+                    android:checked="true"
+                    android:textColor="#999999"
+                    android:background="@drawable/shape_search"/>
+
+                <!-- 15년식 토글버튼 삭제예정. 임시로 안보이게 해놓음 -->
+                <ToggleButton
+                    android:id="@+id/searchYear1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="0.00001"
+                    android:textOn="2015년"
+                    android:textOff="2015년"
+                    android:checked="true"
+                    android:textColor="#ffffff"
+                    android:background="#ffffff"/>
+            </LinearLayout>
+
+            <!-- 프레임검색 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:paddingTop="15dp"
+                android:paddingLeft="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/searchFrame"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="프레임"
+                    android:textColor="#000000"
+                    android:textSize="20sp"/>
+            </LinearLayout>
+
+            <!-- 프레임검색 버튼 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:paddingTop="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <ToggleButton
+                    android:id="@+id/searchFrameAll"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:textOn="전체"
+                    android:textOff="전체"
+                    android:checked="true"
+                    android:textColor="#999999"
+                    android:background="@drawable/shape_search"/>
+
+                <ToggleButton
+                    android:id="@+id/searchFrame1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:textOn="스틸"
+                    android:textOff="스틸"
+                    android:checked="false"
+                    android:textColor="#999999"
+                    android:background="@drawable/shape_search"/>
+
+                <ToggleButton
+                    android:id="@+id/searchFrame2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:textOn="알루미늄"
+                    android:textOff="알루미늄"
+                    android:checked="false"
+                    android:textColor="#999999"
+                    android:background="@drawable/shape_search"/>
+            </LinearLayout>
+
+            <!-- 프레임검색 버튼 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:padding="15dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <ToggleButton
+                    android:id="@+id/searchFrame3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:textOn="카본"
+                    android:textOff="카본"
+                    android:checked="false"
+                    android:textColor="#999999"
+                    android:background="@drawable/shape_search"/>
+
+                <ToggleButton
+                    android:id="@+id/searchFrame4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:textOn="티타늄"
+                    android:textOff="티타늄"
+                    android:checked="false"
+                    android:textColor="#999999"
+                    android:background="@drawable/shape_search"/>
+            </LinearLayout>
+
+            <!-- 브랜드검색 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:paddingTop="15dp"
+                android:paddingLeft="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/searchBrand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="브랜드"
+                    android:textColor="#000000"
+                    android:textSize="20sp"/>
+            </LinearLayout>
+
+            <!-- 브랜드검색 버튼 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:paddingTop="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <ToggleButton
+                    android:id="@+id/searchBrandAll"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:textOn="전체"
+                    android:textOff="전체"
+                    android:checked="true"
+                    android:textColor="#999999"
+                    android:background="@drawable/shape_search"/>
+
+                <ToggleButton
+                    android:id="@+id/searchBrand1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:textOn="궤르쵸티"
+                    android:textOff="궤르쵸티"
+                    android:checked="false"
+                    android:textColor="#999999"
+                    android:background="@drawable/shape_search"/>
+
+                <ToggleButton
+                    android:id="@+id/searchBrand2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:textOn="라피에르"
+                    android:textOff="라피에르"
+                    android:checked="false"
+                    android:textColor="#999999"
+                    android:background="@drawable/shape_search"/>
+            </LinearLayout>
+
+            <!-- 브랜드검색 버튼 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:paddingTop="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <ToggleButton
+                    android:id="@+id/searchBrand3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:textOn="룩"
+                    android:textOff="룩"
+                    android:checked="false"
+                    android:textColor="#999999"
+                    android:background="@drawable/shape_search"/>
+
+                <ToggleButton
+                    android:id="@+id/searchBrand4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:textOn="리들리"
+                    android:textOff="리들리"
+                    android:checked="false"
+                    android:textColor="#999999"
+                    android:background="@drawable/shape_search"/>
+
+                <ToggleButton
+                    android:id="@+id/searchBrand5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:textOn="마린"
+                    android:textOff="마린"
+                    android:checked="false"
+                    android:textColor="#999999"
+                    android:background="@drawable/shape_search"/>
+            </LinearLayout>
+
+            <!-- 브랜드검색 버튼 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:paddingTop="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <ToggleButton
+                    android:id="@+id/searchBrand6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:textOn="마지"
+                    android:textOff="마지"
+                    android:checked="false"
+                    android:textColor="#999999"
+                    android:background="@drawable/shape_search"/>
+
+                <ToggleButton
+                    android:id="@+id/searchBrand7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:textOn="맥킨리"
+                    android:textOff="맥킨리"
+                    android:checked="false"
+                    android:textColor="#999999"
+                    android:background="@drawable/shape_search"/>
+
+                <ToggleButton
+                    android:id="@+id/searchBrand8"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:textOn="메리다"
+                    android:textOff="메리다"
+                    android:checked="false"
+                    android:textColor="#999999"
+                    android:background="@drawable/shape_search"/>
+            </LinearLayout>
+
+            <!-- 브랜드검색 버튼 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:paddingTop="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <ToggleButton
+                    android:id="@+id/searchBrand9"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:textOn="보드만"
+                    android:textOff="보드만"
+                    android:checked="false"
+                    android:textColor="#999999"
+                    android:background="@drawable/shape_search"/>
+
+                <ToggleButton
+                    android:id="@+id/searchBrand10"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:textOn="비앙키"
+                    android:textOff="비앙키"
+                    android:checked="false"
+                    android:textColor="#999999"
+                    android:background="@drawable/shape_search"/>
+
+                <ToggleButton
+                    android:id="@+id/searchBrand11"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:textOn="삼천리"
+                    android:textOff="삼천리"
+                    android:checked="false"
+                    android:textColor="#999999"
+                    android:background="@drawable/shape_search"/>
+            </LinearLayout>
+
+            <!-- 브랜드검색 버튼 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:paddingTop="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <ToggleButton
+                    android:id="@+id/searchBrand12"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:textOn="세파스"
+                    android:textOff="세파스"
+                    android:checked="false"
+                    android:textColor="#999999"
+                    android:background="@drawable/shape_search"/>
+
+                <ToggleButton
+                    android:id="@+id/searchBrand13"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:textOn="스캇"
+                    android:textOff="스캇"
+                    android:checked="false"
+                    android:textColor="#999999"
+                    android:background="@drawable/shape_search"/>
+
+                <ToggleButton
+                    android:id="@+id/searchBrand14"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:textOn="스페셜라이즈드"
+                    android:textOff="스페셜라이즈드"
+                    android:checked="false"
+                    android:textColor="#999999"
+                    android:background="@drawable/shape_search"/>
+            </LinearLayout>
+
+            <!-- 브랜드검색 버튼 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:paddingTop="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <ToggleButton
+                    android:id="@+id/searchBrand15"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:textOn="시포"
+                    android:textOff="시포"
+                    android:checked="false"
+                    android:textColor="#999999"
+                    android:background="@drawable/shape_search"/>
+
+                <ToggleButton
+                    android:id="@+id/searchBrand16"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:textOn="써벨로"
+                    android:textOff="써벨로"
+                    android:checked="false"
+                    android:textColor="#999999"
+                    android:background="@drawable/shape_search"/>
+
+                <ToggleButton
+                    android:id="@+id/searchBrand17"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:textOn="알톤"
+                    android:textOff="알톤"
+                    android:checked="false"
+                    android:textColor="#999999"
+                    android:background="@drawable/shape_search"/>
+            </LinearLayout>
+
+            <!-- 브랜드검색 버튼 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:paddingTop="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <ToggleButton
+                    android:id="@+id/searchBrand18"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:textOn="엘파마"
+                    android:textOff="엘파마"
+                    android:checked="false"
+                    android:textColor="#999999"
+                    android:background="@drawable/shape_search"/>
+
+                <ToggleButton
+                    android:id="@+id/searchBrand19"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:textOn="예거"
+                    android:textOff="예거"
+                    android:checked="false"
+                    android:textColor="#999999"
+                    android:background="@drawable/shape_search"/>
+
+                <ToggleButton
+                    android:id="@+id/searchBrand20"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:textOn="오베아"
+                    android:textOff="오베아"
+                    android:checked="false"
+                    android:textColor="#999999"
+                    android:background="@drawable/shape_search"/>
+            </LinearLayout>
+
+            <!-- 브랜드검색 버튼 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:paddingTop="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <ToggleButton
+                    android:id="@+id/searchBrand21"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:textOn="윌리어"
+                    android:textOff="윌리어"
+                    android:checked="false"
+                    android:textColor="#999999"
+                    android:background="@drawable/shape_search"/>
+
+                <ToggleButton
+                    android:id="@+id/searchBrand22"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:textOn="자이언트"
+                    android:textOff="자이언트"
+                    android:checked="false"
+                    android:textColor="#999999"
+                    android:background="@drawable/shape_search"/>
+
+                <ToggleButton
+                    android:id="@+id/searchBrand23"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:textOn="제이미스"
+                    android:textOff="제이미스"
+                    android:checked="false"
+                    android:textColor="#999999"
+                    android:background="@drawable/shape_search"/>
+            </LinearLayout>
+
+            <!-- 브랜드검색 버튼 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:paddingTop="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <ToggleButton
+                    android:id="@+id/searchBrand24"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:textOn="첼로"
+                    android:textOff="첼로"
+                    android:checked="false"
+                    android:textColor="#999999"
+                    android:background="@drawable/shape_search"/>
+
+                <ToggleButton
+                    android:id="@+id/searchBrand25"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:textOn="캐논데일"
+                    android:textOff="캐논데일"
+                    android:checked="false"
+                    android:textColor="#999999"
+                    android:background="@drawable/shape_search"/>
+
+                <ToggleButton
+                    android:id="@+id/searchBrand26"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:textOn="케스트렐"
+                    android:textOff="케스트렐"
+                    android:checked="false"
+                    android:textColor="#999999"
+                    android:background="@drawable/shape_search"/>
+            </LinearLayout>
+
+            <!-- 브랜드검색 버튼 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:paddingTop="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <ToggleButton
+                    android:id="@+id/searchBrand27"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:textOn="코메트"
+                    android:textOff="코메트"
+                    android:checked="false"
+                    android:textColor="#999999"
+                    android:background="@drawable/shape_search"/>
+
+                <ToggleButton
+                    android:id="@+id/searchBrand28"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:textOn="콜럼버스"
+                    android:textOff="콜럼버스"
+                    android:checked="false"
+                    android:textColor="#999999"
+                    android:background="@drawable/shape_search"/>
+
+                <ToggleButton
+                    android:id="@+id/searchBrand29"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:textOn="큐브"
+                    android:textOff="큐브"
+                    android:checked="false"
+                    android:textColor="#999999"
+                    android:background="@drawable/shape_search"/>
+            </LinearLayout>
+
+            <!-- 브랜드검색 버튼 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:paddingTop="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <ToggleButton
+                    android:id="@+id/searchBrand30"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:textOn="타임"
+                    android:textOff="타임"
+                    android:checked="false"
+                    android:textColor="#999999"
+                    android:background="@drawable/shape_search"/>
+
+                <ToggleButton
+                    android:id="@+id/searchBrand31"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:textOn="트렉"
+                    android:textOff="트렉"
+                    android:checked="false"
+                    android:textColor="#999999"
+                    android:background="@drawable/shape_search"/>
+
+                <ToggleButton
+                    android:id="@+id/searchBrand32"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:textOn="트리곤"
+                    android:textOff="트리곤"
+                    android:checked="false"
+                    android:textColor="#999999"
+                    android:background="@drawable/shape_search"/>
+            </LinearLayout>
+
+            <!-- 브랜드검색 버튼 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:paddingTop="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <ToggleButton
+                    android:id="@+id/searchBrand33"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:textOn="포커스"
+                    android:textOff="포커스"
+                    android:checked="false"
+                    android:textColor="#999999"
+                    android:background="@drawable/shape_search"/>
+
+                <ToggleButton
+                    android:id="@+id/searchBrand34"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:textOn="후지"
+                    android:textOff="후지"
+                    android:checked="false"
+                    android:textColor="#999999"
+                    android:background="@drawable/shape_search"/>
+
+                <ToggleButton
+                    android:id="@+id/searchBrand35"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:textOn="GT"
+                    android:textOff="GT"
+                    android:checked="false"
+                    android:textColor="#999999"
+                    android:background="@drawable/shape_search"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_weight="10" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 메인페이지 버튼 리스트 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="12"
+        android:orientation="horizontal"
+        android:gravity="bottom"
+        android:weightSum="100" >
+
+        <Button
+            android:id="@+id/search"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="100"
+            android:text="검색"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:background="@drawable/background_store" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- 터치했을 때 -->
+    <item android:color="#0aaccc" android:textColor="#0aaccc" android:state_pressed="true"/>
+    <!-- 클릭했을 때 -->
+    <item android:color="#0aaccc" android:textColor="#0aaccc" android:state_checked="true"/>
+    <!-- 기본값 -->
+    <item android:color="#999999" android:textColor="#999999" android:state_checked="false"/>
+</selector>

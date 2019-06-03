@@ -1,0 +1,184 @@
+<resources>
+
+    <!-- 메인 페이지 ************************************ -->
+    <!-- the theme applied to the application or activity -->
+    <style name="AppTheme_main" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/MyActionBar_main</item>
+        <!-- Support library compatibility -->
+        <item name="actionBarStyle">@style/MyActionBar_main</item>
+    </style>
+
+    <!-- ActionBar styles -->
+    <style name="MyActionBar_main" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@drawable/main_action_bar</item>
+        <!-- Support library compatibility -->
+        <item name="background">@drawable/main_action_bar</item>
+    </style>
+
+    <!-- 목록 페이지 ************************************ -->
+    <!-- the theme applied to the application or activity -->
+    <style name="AppTheme_list" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/MyActionBar_list</item>
+        <!-- Support library compatibility -->
+        <item name="actionBarStyle">@style/MyActionBar_list</item>
+    </style>
+
+    <!-- ActionBar styles -->
+    <style name="MyActionBar_list" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@drawable/main_action_bar</item>
+        <!-- Support library compatibility -->
+        <item name="background">@drawable/main_action_bar</item>
+        <item name="android:fontFamily">font/10x10Bold</item>
+    </style>
+
+    <!-- 검색 페이지 ************************************ -->
+    <!-- the theme applied to the application or activity -->
+    <style name="AppTheme_search" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/MyActionBar_search</item>
+        <!-- Support library compatibility -->
+        <item name="actionBarStyle">@style/MyActionBar_search</item>
+    </style>
+
+    <!-- ActionBar styles -->
+    <style name="MyActionBar_search" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@drawable/search_action_bar</item>
+        <!-- Support library compatibility -->
+        <item name="background">@drawable/search_action_bar</item>
+    </style>
+
+    <!-- 상세 페이지 ************************************ -->
+    <!-- the theme applied to the application or activity -->
+    <style name="AppTheme_detail" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/MyActionBar_detail</item>
+        <!-- Support library compatibility -->
+        <item name="actionBarStyle">@style/MyActionBar_detail</item>
+    </style>
+
+    <!-- ActionBar styles -->
+    <style name="MyActionBar_detail" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@drawable/detail_action_bar</item>
+        <!-- Support library compatibility -->
+        <item name="background">@drawable/detail_action_bar</item>
+    </style>
+
+    <!-- 찜목록 페이지 ************************************ -->
+    <!-- the theme applied to the application or activity -->
+    <style name="AppTheme_wishList" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/MyActionBar_wishList</item>
+        <!-- Support library compatibility -->
+        <item name="actionBarStyle">@style/MyActionBar_wishList</item>
+    </style>
+
+    <!-- ActionBar styles -->
+    <style name="MyActionBar_wishList" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@drawable/wishlist_action_bar</item>
+        <!-- Support library compatibility -->
+        <item name="background">@drawable/wishlist_action_bar</item>
+    </style>
+
+    <!-- 매장 페이지 ************************************ -->
+    <!-- the theme applied to the application or activity -->
+    <style name="AppTheme_store" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/MyActionBar_store</item>
+        <!-- Support library compatibility -->
+        <item name="actionBarStyle">@style/MyActionBar_store</item>
+    </style>
+
+    <!-- ActionBar styles -->
+    <style name="MyActionBar_store" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@drawable/store_action_bar</item>
+        <!-- Support library compatibility -->
+        <item name="background">@drawable/store_action_bar</item>
+    </style>
+
+    <!-- 매장 리스트 페이지 ************************************ -->
+    <!-- the theme applied to the application or activity -->
+    <style name="AppTheme_storeList" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/MyActionBar_storeList</item>
+        <!-- Support library compatibility -->
+        <item name="actionBarStyle">@style/MyActionBar_storeList</item>
+    </style>
+
+    <!-- ActionBar styles -->
+    <style name="MyActionBar_storeList" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@drawable/storelist_action_bar</item>
+        <!-- Support library compatibility -->
+        <item name="background">@drawable/storelist_action_bar</item>
+    </style>
+
+    <!-- 인기 리스트 페이지 ************************************ -->
+    <!-- the theme applied to the application or activity -->
+    <style name="AppTheme_ranking" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/MyActionBar_ranking</item>
+        <!-- Support library compatibility -->
+        <item name="actionBarStyle">@style/MyActionBar_ranking</item>
+    </style>
+
+    <!-- ActionBar styles -->
+    <style name="MyActionBar_ranking" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@drawable/ranking_action_bar</item>
+        <!-- Support library compatibility -->
+        <item name="background">@drawable/ranking_action_bar</item>
+    </style>
+
+    <!-- 최신 리스트 페이지 ************************************ -->
+    <!-- the theme applied to the application or activity -->
+    <style name="AppTheme_latest" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/MyActionBar_latest</item>
+        <!-- Support library compatibility -->
+        <item name="actionBarStyle">@style/MyActionBar_latest</item>
+    </style>
+
+    <!-- ActionBar styles -->
+    <style name="MyActionBar_latest" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@drawable/latest_action_bar</item>
+        <!-- Support library compatibility -->
+        <item name="background">@drawable/latest_action_bar</item>
+    </style>
+
+    <!-- 백과사전 페이지 ************************************ -->
+    <!-- the theme applied to the application or activity -->
+    <style name="AppTheme_information" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/MyActionBar_information</item>
+        <!-- Support library compatibility -->
+        <item name="actionBarStyle">@style/MyActionBar_information</item>
+    </style>
+
+    <!-- ActionBar styles -->
+    <style name="MyActionBar_information" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@drawable/information_action_bar</item>
+        <!-- Support library compatibility -->
+        <item name="background">@drawable/information_action_bar</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme.confirmInventory" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!-- 툴바 글씨 색상 표시. 네비게이션 뷰 버튼 색상까지 흰색으로 바뀜
+        <item name="android:textColorPrimary">@color/colorTitleText</item>
+        -->
+    </style>
+
+    <!-- Drawer header style in ConfirmInventoryActivity -->
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.ActionBar">
+        <!-- 툴바의 백 버튼 색상 표시
+        <item name="android:textColorSecondary">@color/colorTitleText</item>
+        -->
+    </style>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+</resources>

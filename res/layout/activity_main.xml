@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="#ffffff"
+              android:orientation="vertical"
+              android:weightSum="100" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff">
+
+        <!-- 메인페이지 -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="23dp"
+                android:paddingRight="23dp"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/buttonRoad"
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:text="@string/road"
+                        android:textSize="40sp"
+                        android:textColor="#0aaccc"
+                        android:background="@drawable/main_road" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/buttonMtb"
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:text="@string/mtb"
+                        android:textSize="40sp"
+                        android:textColor="#0aaccc"
+                        android:background="@drawable/main_mtb" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/buttonStore"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:text="매장 찾기"
+                        android:textSize="25sp"
+                        android:textColor="#0aaccc"
+                        android:background="@drawable/shape_main" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/buttonWishlist"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:text="찜 목록"
+                        android:textSize="25sp"
+                        android:textColor="#0aaccc"
+                        android:background="@drawable/shape_main" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:weightSum="100" >
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#e8e8e8"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+</LinearLayout>

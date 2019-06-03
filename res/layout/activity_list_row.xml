@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="5dp"
+    android:background="#e8e8e8"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:weightSum="100"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/imgIcon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="55"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/test_image" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="45"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical"
+            android:weightSum="100" >
+
+            <TextView
+                android:id="@+id/txtBicycle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp"
+                android:layout_weight="30"
+                android:text="@string/bicycle"
+                android:textSize="15sp"
+                android:textColor="#0aaccc" />
+
+            <TextView
+                android:id="@+id/txtBrand"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:paddingBottom="5dp"
+                android:layout_weight="20"
+                android:text="@string/brand"
+                android:textSize="12sp"
+                android:textColor="#999999" />
+
+            <TextView
+                android:id="@+id/txtFrame"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:paddingBottom="5dp"
+                android:layout_weight="20"
+                android:text="@string/frame"
+                android:textSize="12sp"
+                android:textColor="#999999" />
+
+            <!-- 구동계 정보를 리스트에 넣을 시 정보가 너무 많아짐. 이후 노출 관련 고민 진행 -->
+            <TextView
+                android:id="@+id/txtGroupset"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:paddingBottom="5dp"
+                android:layout_weight="0"
+                android:text="구동계"
+                android:textSize="12sp"
+                android:textColor="#999999" />
+
+            <TextView
+                android:id="@+id/txtPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="20"
+                android:text="@string/price"
+                android:textSize="12sp"
+                android:textColor="#999999" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

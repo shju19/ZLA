@@ -1,0 +1,114 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
+    tools:openDrawer="end"
+    tools:context=".ConfirmInventoryActivity" >
+    <!-- android:fitsSystemWindows="true"
+    above on the actionbar. make this color and set the 'fitsSystemWindows="true"' -->
+
+    <FrameLayout
+        android:id="@+id/fl_activity_main_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- 버튼과 리스트뷰의 비율을 주기 위해 LinearLayout를 추가함. Framelayout에 weightSum 추가 시 적용 안됨 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="100">
+
+            <!-- 툴바 생성. 네비게이션 뷰 생성 시 상하로 전체 화면 띄우기 위함 -->
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorTitleBackground"
+                app:theme="@style/AppTheme.AppBarOverlay"
+                app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+            <!-- 상단 검색 버튼. 색상, 사이즈, 지역 버튼이 들어감 -->
+            <LinearLayout
+                android:id="@+id/layout_inventory_search"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:orientation="horizontal"
+                android:background="#ffffff"
+                android:weightSum="99.2">
+
+                <Button
+                    android:id="@+id/layout_inventory_search_button1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="33"
+                    android:background="@drawable/shape_inventory_search"
+                    android:textColor="#0aaccc"
+                    android:text="색상"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.1"
+                    android:background="#e8e8e8"/>
+
+                <Button
+                    android:id="@+id/layout_inventory_search_button2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="33"
+                    android:background="@drawable/shape_inventory_search"
+                    android:textColor="#0aaccc"
+                    android:text="사이즈"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.1"
+                    android:background="#e8e8e8"/>
+
+                <Button
+                    android:id="@+id/layout_inventory_search_button3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="33"
+                    android:background="@drawable/shape_inventory_search"
+                    android:textColor="#0aaccc"
+                    android:text="지역"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="#e8e8e8"/>
+
+            <!-- 재고 리스트를 표시하는 리스트뷰 -->
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressBar"
+                android:layout_gravity="center_horizontal"/>
+
+            <ListView
+                android:id="@+id/layout_inventory_list"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="90">
+            </ListView>
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- 네비게이션뷰 -->
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:background="#ffffff"
+        android:fitsSystemWindows="true"
+        app:menu="@menu/activity_confirm_inventory_drawer"/>
+
+</android.support.v4.widget.DrawerLayout>

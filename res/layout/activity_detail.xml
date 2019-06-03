@@ -1,0 +1,953 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="#ffffff"
+              android:weightSum="100" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="88" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/view_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:adjustViewBounds="true" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#e5e5e5"/>
+
+                <TextView
+                    android:id="@+id/detailName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:textSize="25sp"
+                    android:textColor="#0aaccc"
+                    android:text="@string/name" />
+
+                <!-- 브랜드 레이아웃 //////////////////////////////////////////////////////////// -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal"
+                    android:weightSum="100" >
+
+                    <TextView
+                        android:id="@+id/detailBrand1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="40"
+                        android:paddingLeft="10dp"
+                        android:textSize="12sp"
+                        android:text="@string/brand" />
+
+                    <TextView
+                        android:id="@+id/detailBrand2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="60"
+                        android:textSize="12sp"
+                        android:text="@string/brand" />
+                </LinearLayout>
+
+                <!-- 색상 레이아웃 ///////////////////////////////////////////////////////////// -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal"
+                    android:weightSum="100" >
+
+                    <TextView
+                        android:id="@+id/detailColor1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="40"
+                        android:paddingLeft="10dp"
+                        android:textSize="12sp"
+                        android:text="@string/color"/>
+
+                    <TextView
+                        android:id="@+id/detailColor2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="60"
+                        android:textSize="12sp"
+                        android:text="@string/color" />
+                </LinearLayout>
+
+                <!-- 사이즈 레이아웃 //////////////////////////////////////////////////////////// -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal"
+                    android:weightSum="100" >
+
+                    <TextView
+                        android:id="@+id/detailSize1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="40"
+                        android:paddingLeft="10dp"
+                        android:textSize="12sp"
+                        android:text="@string/size" />
+
+                    <TextView
+                        android:id="@+id/detailSize2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="60"
+                        android:textSize="12sp"
+                        android:text="@string/size" />
+                </LinearLayout>
+
+                <!-- 가격 레이아웃 ///////////////////////////////////////////////////////////// -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal"
+                    android:weightSum="100" >
+
+                    <TextView
+                        android:id="@+id/detailPrice1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="40"
+                        android:paddingLeft="10dp"
+                        android:textSize="12sp"
+                        android:text="@string/price" />
+
+                    <TextView
+                        android:id="@+id/detailPrice2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="60"
+                        android:textSize="12sp"
+                        android:text="@string/price" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp" />
+
+                <!-- 테이블 레이아웃 //////////////////////////////////////////////////////////// -->
+                <!-- 주요 사양 //////////////////////////////////////////////////////////////// -->
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#cccccc" >
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp" />
+
+                    <TableRow
+                        android:id="@+id/tableRow1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:layout_marginBottom="0.5dp"
+                        android:background="#f7f7f7"
+                        android:weightSum="100" >
+
+                        <TextView
+                            android:id="@+id/mainSpec"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="100"
+                            android:paddingLeft="10dp"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:textColor="#0aaccc"
+                            android:text="@string/main_spec" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:background="#ffffff"
+                        android:weightSum="100" >
+
+                        <TextView
+                            android:id="@+id/mainFrame1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="40"
+                            android:paddingLeft="10dp"
+                            android:textSize="12sp"
+                            android:text="@string/frame" />
+
+                        <TextView
+                            android:id="@+id/mainFrame2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="60"
+                            android:textSize="12sp"
+                            android:text="@string/frame" />
+                    </TableRow>
+<!--
+                    <TableRow
+                        android:id="@+id/tableRow3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:background="#ffffff"
+                        android:weightSum="100" >
+-->
+                        <ImageView
+                            android:id="@+id/frame_graph"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="0.5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:adjustViewBounds="true"
+                            android:gravity="center_horizontal"
+                            android:background="#ffffff"
+                            android:src="@drawable/frame_graph" />
+<!--                    </TableRow>
+-->
+                    <TableRow
+                        android:id="@+id/tableRow4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:background="#ffffff"
+                        android:weightSum="100" >
+
+                        <TextView
+                            android:id="@+id/mainGroupset1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="40"
+                            android:paddingLeft="10dp"
+                            android:textSize="12sp"
+                            android:text="구동계" />
+
+                        <TextView
+                            android:id="@+id/mainGroupset2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="60"
+                            android:textSize="12sp"
+                            android:text="구동계" />
+                    </TableRow>
+
+                    <ImageView
+                        android:id="@+id/groupset_graph"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:adjustViewBounds="true"
+                        android:gravity="center_horizontal"
+                        android:background="#ffffff"
+                        android:src="@drawable/groupset_graph" />
+
+                    <!-- 구동계 /////////////////////////////////////////////////////////////// -->
+                    <TableRow
+                        android:id="@+id/tableRow6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:layout_marginBottom="0.5dp"
+                        android:background="#f7f7f7"
+                        android:weightSum="100" >
+
+                        <TextView
+                            android:id="@+id/groupset"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="100"
+                            android:paddingLeft="10dp"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:textColor="#0aaccc"
+                            android:text="@string/groupset" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.1dp"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:background="#ffffff"
+                        android:weightSum="100" >
+
+                        <TextView
+                            android:id="@+id/detailShifters1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="40"
+                            android:paddingLeft="10dp"
+                            android:textSize="12sp"
+                            android:text="@string/shifters" />
+
+                        <TextView
+                            android:id="@+id/detailShifters2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="60"
+                            android:textSize="12sp"
+                            android:text="@string/shifters" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow8"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.1dp"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:background="#ffffff"
+                        android:weightSum="100" >
+
+                        <TextView
+                            android:id="@+id/detailFrontDerailleur1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="40"
+                            android:paddingLeft="10dp"
+                            android:textSize="12sp"
+                            android:text="@string/frontDerailleur" />
+
+                        <TextView
+                            android:id="@+id/detailFrontDerailleur2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="60"
+                            android:textSize="12sp"
+                            android:text="@string/frontDerailleur" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow9"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.1dp"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:background="#ffffff"
+                        android:weightSum="100" >
+
+                        <TextView
+                            android:id="@+id/detailRearDerailleur1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="40"
+                            android:paddingLeft="10dp"
+                            android:textSize="12sp"
+                            android:text="@string/rearDerailleur" />
+
+                        <TextView
+                            android:id="@+id/detailRearDerailleur2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="60"
+                            android:textSize="12sp"
+                            android:text="@string/rearDerailleur" />
+                    </TableRow>
+
+                    <!-- 브레이크와 정보 거의 중복으로 표기X
+                    <TableRow
+                        android:id="@+id/tableRow10"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.1dp"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:background="#ffffff"
+                        android:weightSum="100" >
+
+                        <TextView
+                            android:id="@+id/detailBrakeLever1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="40"
+                            android:paddingLeft="10dp"
+                            android:textSize="12sp"
+                            android:text="@string/brakeLever" />
+
+                        <TextView
+                            android:id="@+id/detailBrakeLever2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="60"
+                            android:textSize="12sp"
+                            android:text="@string/brakeLever" />
+                    </TableRow>
+
+                     -->
+
+                    <TableRow
+                        android:id="@+id/tableRow11"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.1dp"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:background="#ffffff"
+                        android:weightSum="100" >
+
+                        <TextView
+                            android:id="@+id/detailBrake1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="40"
+                            android:paddingLeft="10dp"
+                            android:textSize="12sp"
+                            android:text="@string/brake" />
+
+                        <TextView
+                            android:id="@+id/detailBrake2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="60"
+                            android:textSize="12sp"
+                            android:text="@string/brake" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow12"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.1dp"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:background="#ffffff"
+                        android:weightSum="100" >
+
+                        <TextView
+                            android:id="@+id/detailCrankset1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="40"
+                            android:paddingLeft="10dp"
+                            android:textSize="12sp"
+                            android:text="@string/crankset" />
+
+                        <TextView
+                            android:id="@+id/detailCrankset2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="60"
+                            android:textSize="12sp"
+                            android:text="@string/crankset" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow13"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.1dp"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:background="#ffffff"
+                        android:weightSum="100" >
+
+                        <TextView
+                            android:id="@+id/detailSprocket1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="40"
+                            android:paddingLeft="10dp"
+                            android:textSize="12sp"
+                            android:text="@string/sprocket" />
+
+                        <TextView
+                            android:id="@+id/detailSprocket2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="60"
+                            android:textSize="12sp"
+                            android:text="@string/sprocket" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow14"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:background="#ffffff"
+                        android:weightSum="100" >
+
+                        <TextView
+                            android:id="@+id/detailChain1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="40"
+                            android:paddingLeft="10dp"
+                            android:textSize="12sp"
+                            android:text="@string/chain" />
+
+                        <TextView
+                            android:id="@+id/detailChain2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="60"
+                            android:textSize="12sp"
+                            android:text="@string/chain" />
+                    </TableRow>
+
+                    <!-- 상세 사양 ///////////////////////////////////////////////////////////// -->
+                    <TableRow
+                        android:id="@+id/tableRow15"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:layout_marginBottom="0.5dp"
+                        android:background="#f7f7f7"
+                        android:weightSum="100" >
+
+                        <TextView
+                            android:id="@+id/detailSpec"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="100"
+                            android:paddingLeft="10dp"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:textColor="#0aaccc"
+                            android:text="@string/detail_spec" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow16"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.1dp"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:background="#ffffff"
+                        android:weightSum="100" >
+
+                        <TextView
+                            android:id="@+id/detailFork1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="40"
+                            android:paddingLeft="10dp"
+                            android:textSize="12sp"
+                            android:text="@string/fork" />
+
+                        <TextView
+                            android:id="@+id/detailFork2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="60"
+                            android:textSize="12sp"
+                            android:text="@string/fork" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow17"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.1dp"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:background="#ffffff"
+                        android:weightSum="100" >
+
+                        <TextView
+                            android:id="@+id/detailStem1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="40"
+                            android:paddingLeft="10dp"
+                            android:textSize="12sp"
+                            android:text="@string/stem" />
+
+                        <TextView
+                            android:id="@+id/detailStem2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="60"
+                            android:textSize="12sp"
+                            android:text="@string/stem" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow18"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.1dp"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:background="#ffffff"
+                        android:weightSum="100" >
+
+                        <TextView
+                            android:id="@+id/detailHandlebar1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="40"
+                            android:paddingLeft="10dp"
+                            android:textSize="12sp"
+                            android:text="@string/handlebar" />
+
+                        <TextView
+                            android:id="@+id/detailHandlebar2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="60"
+                            android:textSize="12sp"
+                            android:text="@string/handlebar" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow19"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.1dp"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:background="#ffffff"
+                        android:weightSum="100" >
+
+                        <TextView
+                            android:id="@+id/detailWheelset1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="40"
+                            android:paddingLeft="10dp"
+                            android:textSize="12sp"
+                            android:text="@string/wheelset" />
+
+                        <TextView
+                            android:id="@+id/detailWheelset2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="60"
+                            android:textSize="12sp"
+                            android:text="@string/wheelset" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow20"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.1dp"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:background="#ffffff"
+                        android:weightSum="100" >
+
+                        <TextView
+                            android:id="@+id/detailTires1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="40"
+                            android:paddingLeft="10dp"
+                            android:textSize="12sp"
+                            android:text="@string/tires" />
+
+                        <TextView
+                            android:id="@+id/detailTires2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="60"
+                            android:textSize="12sp"
+                            android:text="@string/tires" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow21"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.1dp"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:background="#ffffff"
+                        android:weightSum="100" >
+
+                        <TextView
+                            android:id="@+id/detailSaddle1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="40"
+                            android:paddingLeft="10dp"
+                            android:textSize="12sp"
+                            android:text="@string/saddle" />
+
+                        <TextView
+                            android:id="@+id/detailSaddle2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="60"
+                            android:textSize="12sp"
+                            android:text="@string/saddle" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow22"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.1dp"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:background="#ffffff"
+                        android:weightSum="100" >
+
+                        <TextView
+                            android:id="@+id/detailSeatPost1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="40"
+                            android:paddingLeft="10dp"
+                            android:textSize="12sp"
+                            android:text="@string/seatPost" />
+
+                        <TextView
+                            android:id="@+id/detailSeatPost2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="60"
+                            android:textSize="12sp"
+                            android:text="@string/seatPost" />
+                    </TableRow>
+
+                    <!-- 페달 정보 거의 없고 중요하지 않아 표기X
+                    <TableRow
+                        android:id="@+id/tableRow23"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.1dp"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:background="#ffffff"
+                        android:weightSum="100" >
+
+                        <TextView
+                            android:id="@+id/detailPedal1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="40"
+                            android:paddingLeft="10dp"
+                            android:textSize="12sp"
+                            android:text="@string/pedal" />
+
+                        <TextView
+                            android:id="@+id/detailPedal2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="60"
+                            android:textSize="12sp"
+                            android:text="@string/pedal" />
+                    </TableRow>
+                    -->
+
+                    <TableRow
+                        android:id="@+id/tableRow24"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.1dp"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:background="#ffffff"
+                        android:weightSum="100" >
+
+                        <TextView
+                            android:id="@+id/detailRearShock1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="40"
+                            android:paddingLeft="10dp"
+                            android:textSize="12sp"
+                            android:text="@string/rearShock" />
+
+                        <TextView
+                            android:id="@+id/detailRearShock2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="60"
+                            android:textSize="12sp"
+                            android:text="@string/rearShock" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow25"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.1dp"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:background="#ffffff"
+                        android:weightSum="100" >
+
+                        <TextView
+                            android:id="@+id/detailWeight1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="40"
+                            android:paddingLeft="10dp"
+                            android:textSize="12sp"
+                            android:text="@string/weight" />
+
+                        <TextView
+                            android:id="@+id/detailWeight2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="60"
+                            android:textSize="12sp"
+                            android:text="@string/weight" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow26"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.1dp"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:background="#ffffff"
+                        android:weightSum="100" >
+
+                        <TextView
+                            android:id="@+id/detailYear1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="40"
+                            android:paddingLeft="10dp"
+                            android:textSize="12sp"
+                            android:text="@string/year" />
+
+                        <TextView
+                            android:id="@+id/detailYear2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="60"
+                            android:textSize="12sp"
+                            android:text="@string/year" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow27"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0.5dp"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:background="#ffffff"
+                        android:weightSum="100" >
+
+                        <TextView
+                            android:id="@+id/detailType1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="40"
+                            android:paddingLeft="10dp"
+                            android:textSize="12sp"
+                            android:text="@string/type" />
+
+                        <TextView
+                            android:id="@+id/detailType2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="60"
+                            android:textSize="12sp"
+                            android:text="@string/type" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow28"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:layout_marginBottom="0.5dp"
+                        android:background="#f7f7f7"
+                        android:weightSum="100" >
+
+                        <TextView
+                            android:id="@+id/detailGeometry"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="100"
+                            android:paddingLeft="10dp"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:textColor="#0aaccc"
+                            android:text="@string/geometry"/>
+                    </TableRow>
+                </TableLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:adjustViewBounds="true"
+                    android:gravity="center_horizontal"
+                    android:src="@mipmap/geometry"/>
+
+                <ImageView
+                    android:id="@+id/detailGeometryImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="20dp"
+                    android:adjustViewBounds="true"
+                    android:gravity="center_horizontal"
+                    android:src="@mipmap/geometry" />
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+
+    <!-- 상세페이지 버튼 리스트 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="12"
+        android:orientation="horizontal"
+        android:gravity="bottom"
+        android:weightSum="100" >
+
+        <Button
+            android:id="@+id/confirmStore"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_store"
+            android:text="실시간 재고확인"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:layout_weight="100"/>
+    </LinearLayout>
+</LinearLayout>

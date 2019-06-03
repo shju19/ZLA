@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">즐라</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- 액션바 -->
+    <string name="action_search">조건에 맞춰 검색하세요</string>
+
+    <!-- 메인 페이지 -->
+    <string name="road">로드</string>
+    <string name="mtb">MTB</string>
+    <string name="home">홈</string>
+    <string name="wish_list">찜목록</string>
+    <string name="store">매장</string>
+
+    <!-- 상세 페이지 -->
+    <string name="bicycle">자전거명</string>
+    <string name="brand">브랜드</string>
+    <string name="type">타입</string>
+    <string name="year">년도</string>
+    <string name="name">이름</string>
+    <string name="color">색상</string>
+    <string name="size">사이즈</string>
+    <string name="price">가격</string>
+
+    <string name="main_spec">메인사양</string>
+    <string name="frame">프레임</string>
+    <string name="fork">포크</string>
+
+    <string name="groupset">구동계 세부정보</string>
+    <string name="shifters">변속레버</string>
+    <string name="frontDerailleur">앞변속기</string>
+    <string name="rearDerailleur">뒷변속기</string>
+    <string name="brakeLever">브레이크레버</string>
+    <string name="brake">브레이크</string>
+    <string name="crankset">크랭크셋</string>
+    <string name="sprocket">스프라켓</string>
+    <string name="chain">체인</string>
+
+    <string name="detail_spec">상세사양</string>
+    <string name="stem">스템</string>
+    <string name="handlebar">핸들바</string>
+    <string name="wheelset">휠셋</string>
+    <string name="tires">타이어</string>
+    <string name="saddle">안장</string>
+    <string name="seatPost">싯포스트</string>
+    <string name="pedal">페달</string>
+    <string name="rearShock">리어샥</string>
+    <string name="weight">무게</string>
+    <string name="geometry">지오메트리</string>
+
+    <!-- 페이지명 -->
+    <string name="mainActivity">즐라</string>
+    <string name="listActivity">목록</string>
+    <string name="detailActivity">상세 정보</string>
+
+
+    <!-- 네이게이션 드로어 열고 닫기 표시 변수 -->
+    <string name="navigation_drawer_open">열기</string>
+    <string name="navigation_drawer_close">닫기</string>
+
+    <!-- 네이게이션 드로어 체크박스 변수 -->
+    <string-array name="drawer_color">
+        <item>Color1</item>
+        <item>Color2</item>
+        <item>Color3</item>
+        <item>Color4</item>
+        <item>Color5</item>
+    </string-array>
+</resources>
